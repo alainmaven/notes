@@ -9,6 +9,10 @@ declare module "sst" {
       "type": "sst.aws.ApiGatewayV2"
       "url": string
     }
+    "Frontend": {
+      "type": "sst.aws.StaticSite"
+      "url": string
+    }
     "IdentityPool": {
       "id": string
       "type": "sst.aws.CognitoIdentityPool"
@@ -16,6 +20,10 @@ declare module "sst" {
     "Notes": {
       "name": string
       "type": "sst.aws.Dynamo"
+    }
+    "StripeSecretKey": {
+      "type": "sst.sst.Secret"
+      "value": string
     }
     "Uploads": {
       "name": string
