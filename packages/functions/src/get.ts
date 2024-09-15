@@ -10,7 +10,7 @@ export const main = Util.handler(async (event) => {
     TableName: Resource.Notes.name,
     //'Key' defines the partition key and sort key of the item to be retreived
     Key: {
-      userId: "123", //id of author
+      userId: event.requestContext.authorizer?.iam.cognitoIdentity.identityId, //id of author
       noteId: event?.pathParameters?.id, //id of note from path
     },
   };
