@@ -1,8 +1,4 @@
-export const bucket = new sst.aws.Bucket("Uploads", {
-  cors: {
-    allowMethods: ["GET"]
-  }
-});
+export const bucket = new sst.aws.Bucket("Uploads");
 
 export const table = new sst.aws.Dynamo("Notes", {
   fields: {
