@@ -1,4 +1,5 @@
 const config = {
+  STRIPE_KEY: "pk_test_51PzFIcHmlQRa0gmLpNgMsSbZZQwDhhpNyYL7JnmDGPdkiOSb2Sil8LxGAhtFYt4ZxlQQpGzCt3OmR66lTvFH8Myw00EflYNlsE",
   // Frontend config
   MAX_ATTACHMENT_SIZE: 5000000,
 

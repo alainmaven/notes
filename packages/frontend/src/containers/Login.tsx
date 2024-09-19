@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import "./Login.css"
 import { Auth } from "aws-amplify";
 import { useAppContext } from "../lib/contextLib";
-import { useNavigate } from "react-router-dom";
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../lib/errorLib";
 import { userFormFields } from "../lib/hooksLib";
@@ -15,7 +14,6 @@ const Login = () => {
     password: "",
   });
   const { userHasAuthenticated } = useAppContext();
-  const nav = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
@@ -31,7 +29,6 @@ const Login = () => {
     try {
       await Auth.signIn(fields.email, fields.password);
       userHasAuthenticated(true);
-      nav("/");
     } catch (error) {
       onError(error);
 
